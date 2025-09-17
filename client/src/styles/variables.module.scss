@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
+
+@font-face {
+  font-family: "ThinManGiambattista";
+  src: url("/my-app/public/fonts/ThinManGiambattista.ttf.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$general-font-color: #bfc3ba;
+$background-color: #000;
+$link-color: #ebbab9;
+$border-color: #666b6a;
+$color-black: #000;
+$color-white: #fff;
+
+$thinMan-font: "ThinManGiambattista";
+$poppins-font: "Poppins", sans-serif;
+$libre-font: "Libre Caslon Display", serif;
+
+.bg-black {
+  background-color: $background-color !important;
+}
+
+.text-gray {
+  color: $general-font-color !important;
+}
+
+:export {
+  backgroundColor: $background-color;
+  fontColor: $general-font-color;
+  thinManFont: $thinMan-font;
+  poppinsFont: $poppins-font;
+  link-color: $link-color;
+  frame-color: $border-color;
+}

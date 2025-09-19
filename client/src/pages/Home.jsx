@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Card from "react-bootstrap/Card";
+import Spinner from "react-bootstrap/Spinner";
 import Header from "../components/Header";
 import ImageIda from "../components/ImageIda";
 
@@ -58,7 +59,9 @@ function home() {
                     <Card.Text key={item.id}>{item.paragraph}</Card.Text>
                   ))
                 ) : (
-                  <p>...</p>
+                  <Spinner animation="border" role="status" variant="dark">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
                 )}
               </div>
 
@@ -72,7 +75,9 @@ function home() {
                     <Card.Text key={item.id}>{item.paragraph}</Card.Text>
                   ))
                 ) : (
-                  <p>...</p>
+                  <Spinner animation="border" role="status" variant="dark">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
                 )}
                 <Card.Link
                   className="icon-link icon-link-hover mt-2"

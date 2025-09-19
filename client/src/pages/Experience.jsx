@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Spinner from "react-bootstrap/Spinner";
 
 import "animate.css";
 
@@ -69,10 +70,10 @@ export default function experience() {
             Work experience
           </Card.Title>
           <Row className="justify-content-center align-items-center mb-1">
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Title</Card.Title>
             </Col>
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Company</Card.Title>
             </Col>
             <Col md={2} xs={3} className="mb-3">
@@ -85,10 +86,10 @@ export default function experience() {
                 key={item.id}
                 className="justify-content-center align-items-center mb-3"
               >
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text">{item.title}</Card.Text>
                 </Col>
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text">{item.company}</Card.Text>
                 </Col>
                 <Col md={2} xs={3} className="mb-3">
@@ -97,9 +98,10 @@ export default function experience() {
               </Row>
             ))
           ) : (
-            <p>...</p>
+            <Spinner animation="border" role="status" variant="dark">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
           )}
-          ;
         </Card.Body>
         <div className="title-underline"></div>
 
@@ -109,10 +111,10 @@ export default function experience() {
             Education
           </Card.Title>
           <Row className="justify-content-center align-items-center">
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Degree:</Card.Title>
             </Col>
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Institution:</Card.Title>
             </Col>
             <Col md={2} xs={3} className="mb-3">
@@ -125,10 +127,10 @@ export default function experience() {
                 key={item.id}
                 className="justify-content-center align-items-center mb-3 "
               >
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text-xs">{item.degree}</Card.Text>
                 </Col>
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text-xs">
                     {item.institution}
                   </Card.Text>
@@ -139,9 +141,10 @@ export default function experience() {
               </Row>
             ))
           ) : (
-            <p>...</p>
+            <Spinner animation="border" role="status" variant="dark">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
           )}
-          ;
         </Card.Body>
 
         <div className="title-underline"></div>
@@ -152,10 +155,10 @@ export default function experience() {
             Development experience
           </Card.Title>
           <Row className="justify-content-center align-items-center ">
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Title:</Card.Title>
             </Col>
-            <Col md={4} xs={3} className="mb-3">
+            <Col md={4} xs={4} className="mb-3">
               <Card.Title className="sub-title">Company:</Card.Title>
             </Col>
             <Col md={2} xs={3} className="mb-3">
@@ -168,10 +171,10 @@ export default function experience() {
                 key={item.id}
                 className="justify-content-center align-items-center mb-3 "
               >
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text-xs">{item.title}</Card.Text>
                 </Col>
-                <Col md={4} xs={3} className="mb-3">
+                <Col md={4} xs={4} className="mb-3">
                   <Card.Text className="card-text-xs">{item.company}</Card.Text>
                 </Col>
                 <Col md={2} xs={3} className="mb-3">
@@ -180,14 +183,15 @@ export default function experience() {
               </Row>
             ))
           ) : (
-            <p>...</p>
+            <Spinner animation="border" role="status" variant="dark">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
           )}
-          ;
         </Card.Body>
         <div className="title-underline"></div>
 
         {/* Technical Skills */}
-        <Card.Body className="col-12 col-md-10">
+        <Card.Body className="col-12 col-md-12">
           <Card.Title className="titel-experience d-flex justify-content-center align-items-center mb-5">
             Technical skills
           </Card.Title>

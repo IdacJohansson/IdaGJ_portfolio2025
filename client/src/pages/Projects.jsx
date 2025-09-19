@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import Spinner from "react-bootstrap/Spinner";
 
 import Header from "../components/Header";
 
@@ -42,7 +43,7 @@ export default function Projects() {
                       width={500}
                       height={500}
                       alt="project image"
-                      className="img-style img-wrapper"
+                      className="img-wrapper"
                     />
                   </a>
                   <Card.Body>
@@ -62,7 +63,9 @@ export default function Projects() {
               </Col>
             ))
           ) : (
-            <p>Loading...</p>
+            <Spinner animation="border" role="status" variant="dark">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
           )}
         </Row>
       </Card>

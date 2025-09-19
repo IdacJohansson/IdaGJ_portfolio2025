@@ -38,6 +38,18 @@ main {
   background-color: $link-color;
 }
 
+.link-position {
+  @media screen and (max-width: 480px) {
+    align-items: start;
+  }
+}
+
+.offcanvas-body {
+  @media screen and (max-width: 480px) {
+    background-color: $link-color;
+  }
+}
+
 // General
 
 .text-container {
@@ -72,11 +84,11 @@ main {
   width: 900px;
   /* Tablet*/
   @media screen and (max-width: 768px) {
-    width: 600px;
+    width: 700px;
   }
   /* Mobile */
   @media screen and (max-width: 480px) {
-    width: 400px;
+    width: 370px;
   }
 }
 
@@ -104,6 +116,10 @@ main {
 
 .img-style {
   border-bottom: solid $color-white;
+  /* Tablet*/
+  @media screen and (max-width: 768px) {
+    width: 300px;
+  }
   /* Mobile */
   @media screen and (max-width: 480px) {
     display: none;
@@ -120,8 +136,13 @@ main {
 .title-previous-experience {
   margin-top: 0px;
   @extend %general-style;
+  /* Tablet*/
   @media screen and (max-width: 768px) {
     margin-top: 10px;
+  }
+  /* Mobile */
+  @media screen and (max-width: 480px) {
+    margin-top: 15px;
   }
 }
 
@@ -178,7 +199,7 @@ main {
     font-size: 16px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 .card-text-xs {
@@ -187,11 +208,11 @@ main {
     font-size: 16px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
-// contact & ecperience
+// contact & experience
 
 .second-heading {
   width: 500px;

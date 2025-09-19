@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Spinner from "react-bootstrap/Spinner";
 
 import "animate.css";
 import Header from "../components/Header";
@@ -49,7 +50,9 @@ export default function contact() {
                   </Card.Text>
                 ))
               ) : (
-                <p>...</p>
+                <Spinner animation="border" role="status" variant="dark">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
               )}
             </Col>
           </Row>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMappedSkills } from "../service/skillsService.js";
+import Spinner from "react-bootstrap/Spinner";
 
 export default function SkillsMap() {
   const [mappedSkills, setMappedSkills] = useState(null);
@@ -77,7 +78,9 @@ export default function SkillsMap() {
           )}
         </div>
       ) : (
-        <p>...</p>
+        <Spinner animation="border" role="status" variant="dark">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
       )}
     </div>
   );

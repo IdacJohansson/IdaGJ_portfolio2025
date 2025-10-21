@@ -36,8 +36,13 @@ export default function Projects() {
           {projectText ? (
             projectText.map((item) => (
               <Col key={item.id}>
-                <Card className="custom-card mb-5">
-                  <a href={item.http} target="_blank" rel="noopener noreferrer">
+                <Card className="custom-card mb-3">
+                  <a
+                    href={item.http}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="stretched-link"
+                  >
                     <Image
                       src={item.picture}
                       width={500}
@@ -50,16 +55,16 @@ export default function Projects() {
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text>{item.text}</Card.Text>
                   </Card.Body>
-                  <a
-                    className="icon-link icon-link-hover mt-2 m-3"
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View source code on Github
-                    <i className="bi bi-arrow-right"></i>
-                  </a>
                 </Card>
+                <Card.Link
+                  className="icon-link icon-link-hover m-1 mb-3"
+                  href={item.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View source code on Github
+                  <i className="bi bi-arrow-right"></i>
+                </Card.Link>
               </Col>
             ))
           ) : (

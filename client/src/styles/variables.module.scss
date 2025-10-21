@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300;1,300&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 @font-face {
   font-family: "ThinManGiambattista";
@@ -9,30 +11,33 @@
   font-style: normal;
 }
 
-$general-font-color: #bfc3ba;
-$background-color: #000;
-$link-color: #ebbab9;
-$border-color: #666b6a;
+$background-color: #11110f;
+$link-color: #d4c7b4;
+$color-gray: #666b6a;
 $color-black: #000;
 $color-white: #fff;
+
+$box-color: #d4c7b4;
+$box-color-dark: #4b4a45;
 
 $thinMan-font: "ThinManGiambattista";
 $poppins-font: "Poppins", sans-serif;
 $libre-font: "Libre Caslon Display", serif;
+$google-font: "Google Sans Code", monospace;
+$jetbrains-font: "JetBrains Mono, monospace";
 
 .bg-black {
   background-color: $background-color !important;
 }
 
-.text-gray {
-  color: $general-font-color !important;
-}
-
 :export {
   backgroundColor: $background-color;
-  fontColor: $general-font-color;
   thinManFont: $thinMan-font;
   poppinsFont: $poppins-font;
+  libreFont: $libre-font;
+  googleFont: $google-font;
+  jetbrainsFont: $jetbrains-font;
   link-color: $link-color;
-  frame-color: $border-color;
+  boxColor: $box-color;
+  boxColorDark: $box-color-dark;
 }

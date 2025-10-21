@@ -2,10 +2,11 @@ import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Image from "react-bootstrap/Image";
-import ImgIda from "../assets/images/ida.jpg";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
+
   return (
     <Navbar expand="sm" variant="dark">
       <Container>
@@ -18,26 +19,44 @@ const NavBar = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              <Image
-                src={ImgIda}
-                style={{ width: "40px", height: "40px", border: "solid" }}
-                roundedCircle
-              />
+              <a
+                href="https://www.facebook.com/profile.php?id=735198102"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://github.com/IdacJohansson"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-github p-2"></i>
+              </a>
+              <a
+                href="https://se.linkedin.com/in/ida-grufman-johansson-45ab60b6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className="offcanvas-body">
             <Nav className="link-position mx-auto">
-              <Nav.Link className="custom-link" href="/">
-                Ida
-              </Nav.Link>
+              {location.pathname !== "/" && (
+                <Nav.Link as={Link} to="/" className="custom-link">
+                  IDA
+                </Nav.Link>
+              )}
               <Nav.Link className="custom-link" href="/experience">
-                Experience
+                EXPERIENCE
               </Nav.Link>
               <Nav.Link className="custom-link" href="/projects">
-                Projects
+                PRPJECTS
               </Nav.Link>
               <Nav.Link className="custom-link" href="/contact">
-                Contact
+                CONTACT
               </Nav.Link>
               <Nav.Link
                 className="custom-link"
@@ -45,7 +64,7 @@ const NavBar = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                GitHub
+                GITHUB
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>

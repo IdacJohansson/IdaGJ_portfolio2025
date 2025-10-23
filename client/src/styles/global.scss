@@ -39,13 +39,13 @@ main {
 }
 
 .link-position {
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     align-items: start;
   }
 }
 
 .offcanvas-body {
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     background-color: $box-color-dark;
   }
 }
@@ -79,7 +79,7 @@ main {
   @media screen and (max-width: 768px) {
     padding: 10px;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     padding: 20px;
     width: 300px;
   }
@@ -96,11 +96,12 @@ main {
 }
 
 .container-size {
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   @media screen and (max-width: 768px) {
     width: 700px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 390px;
   }
 }
@@ -108,8 +109,10 @@ main {
 // Home / TopHeader / Header
 
 .top-header {
-  width: 1330px;
-  height: 104px;
+  max-width: 1330px;
+  width: 100%;
+  max-height: 104px;
+  height: 100%;
   background-color: $box-color;
   border-radius: 9px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -117,8 +120,8 @@ main {
     width: 700px;
     height: 80px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    width: 390px;
+  @media screen and (min-width: 375px) and (max-width: 480px) {
+    width: 380px;
     height: 60px;
   }
 }
@@ -128,7 +131,7 @@ main {
     width: 90px;
     height: 70px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 90px;
     height: 60px;
   }
@@ -152,7 +155,7 @@ main {
     height: 890px;
     padding: 5px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     display: flex;
     width: 390px;
     height: 750px;
@@ -170,7 +173,7 @@ main {
     padding: 5px;
     margin-top: 0;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     display: flex;
     flex-direction: column;
     width: 390px;
@@ -185,13 +188,14 @@ main {
   background-color: $background-color;
   border-radius: 9px;
   border: solid 1px $color-white;
-  width: 460px;
+  max-width: 460px;
+  width: 100%;
   height: 482px;
   @media screen and (max-width: 768px) {
     width: 300px;
     height: 400px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 180px;
     height: 350px;
   }
@@ -208,7 +212,7 @@ main {
   @media screen and (max-width: 768px) {
     font-size: 10px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     font-size: 7px;
   }
 }
@@ -224,7 +228,7 @@ main {
     width: 280px;
     height: 400px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 180px;
     height: 350px;
   }
@@ -235,13 +239,14 @@ main {
   flex-direction: column;
   padding: 0px;
   justify-content: space-between;
-  width: 460px;
+  max-width: 690px;
+  width: 100%;
   padding: 0;
   @media screen and (max-width: 768px) {
     width: 700px;
     height: 450px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 390px;
     height: 350px;
   }
@@ -257,7 +262,7 @@ main {
     width: 690px;
     height: 350px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 380px;
     height: 350px;
   }
@@ -276,7 +281,7 @@ main {
     width: 690px;
     height: 50px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 100px) and (max-width: 480px) {
     display: none;
   }
 }
@@ -348,7 +353,7 @@ main {
     width: 700px;
     height: 350px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 380px;
     height: 350px;
   }
@@ -360,24 +365,22 @@ main {
   border: solid 1px $color-white;
   justify-content: center;
   align-items: center;
+  display: flex;
   @media screen and (max-width: 768px) {
     width: 700px;
     height: 300px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 380px;
     height: 320px;
   }
 }
-
-.quality-node {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 8px 12px;
-  font-weight: 500;
-  text-align: center;
+.eer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-box {
@@ -396,7 +399,7 @@ main {
     width: 700px;
     height: 150px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 380px;
     height: 100px;
   }
@@ -411,24 +414,24 @@ main {
 .heading-dark {
   @extend %heading-style;
   color: $color-black;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    font-size: 42px;
+  @media screen and (min-width: 375px) and (max-width: 480px) {
+    font-size: 28px;
   }
 }
 
 .heading-light {
   @extend %heading-style;
   color: $color-white;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    font-size: 42px;
+  @media screen and (min-width: 375px) and (max-width: 480px) {
+    font-size: 40px;
   }
 }
 
 .heading-lg {
   font-size: 100px;
   font-family: $thinMan-font;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    font-size: 42px;
+  @media screen and (min-width: 375px) and (max-width: 480px) {
+    font-size: 40px;
   }
 }
 
@@ -437,7 +440,7 @@ main {
     margin-top: 12px;
     margin-bottom: 0px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     margin-top: 8px;
   }
 }
@@ -447,7 +450,7 @@ main {
   @media screen and (max-width: 768px) {
     width: 300px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     display: none;
   }
 }
@@ -465,7 +468,7 @@ main {
   @media screen and (max-width: 768px) {
     margin-top: 10px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     margin-top: 15px;
   }
 }
@@ -478,7 +481,7 @@ main {
 
 .titel-experience {
   @extend %general-style;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     font-size: 20px;
   }
 }
@@ -489,18 +492,7 @@ main {
   width: 600px;
   margin-bottom: 20px;
   opacity: 0.7;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    width: 300px;
-  }
-}
-
-.black-underline {
-  background-color: $color-black;
-  height: 2px;
-  width: 600px;
-  margin-bottom: 50px;
-  opacity: 0.7;
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     width: 300px;
   }
 }
@@ -512,7 +504,7 @@ main {
   @media screen and (max-width: 768px) {
     font-size: 18px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     font-size: 14px;
   }
 }
@@ -522,8 +514,8 @@ main {
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
-    font-size: 11px;
+  @media screen and (min-width: 375px) and (max-width: 480px) {
+    font-size: 12px;
   }
 }
 .card-text-xs {
@@ -531,7 +523,7 @@ main {
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     font-size: 11px;
   }
 }
@@ -546,7 +538,7 @@ main {
   @media screen and (max-width: 768px) {
     font-size: 62px;
   }
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     font-size: 42px;
   }
 }
@@ -713,7 +705,7 @@ main {
     }
   }
 
-  @media screen and (min-width: 400px) and (max-width: 480px) {
+  @media screen and (min-width: 375px) and (max-width: 480px) {
     .categories {
       .category.custom-col {
         flex: 0 0 45%;

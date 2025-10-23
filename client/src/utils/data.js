@@ -1,3 +1,4 @@
+
 export const jsonString = `{
   "status": 200,
   "success": true,
@@ -25,101 +26,146 @@ export const jsonString = `{
 
 // EER
 
-const nodeStyle = {
-  background: "transparent",
-  color: "#fff",
-  border: "2px solid #fff",
-  borderRadius: "10px",
-  padding: "8px 12px",
-  fontWeight: 500,
-  fontSize: "20px",
-  fontFamily: "Google Sans Code",
-  textAlign: "center",
+const getHeadingLabelStyle = () => {
+  if (window.innerWidth >= 400 && window.innerWidth <= 480) {
+    return {
+      background: "#111",
+      color: "#fff",
+      padding: 6,
+      borderRadius: 10,
+      fontWeight: "bold",
+      fontSize: "10px",
+      fontFamily: "Google Sans Code",
+      width: "150px",
+    };
+  } else {
+    return {
+      background: "#111",
+      color: "#fff",
+      padding: 10,
+      borderRadius: 10,
+      fontWeight: "bold",
+      fontSize: "14px",
+      fontFamily: "Google Sans Code",
+      width: "200px",
+    };
+  }
 };
 
-const headingLable = {
-  background: "#111",
-  color: "#fff",
-  padding: 10,
-  borderRadius: 10,
-  fontWeight: "bold",
-  fontSize: "30px",
-  fontFamily: "Google Sans Code",
-  width: "400px",
+const getCategoryStyle = () => {
+  if (window.innerWidth >= 400 && window.innerWidth <= 480) {
+    return {
+      background: "#fff",
+      borderRadius: 10,
+      padding: 3,
+      fontSize: "10px",
+      fontFamily: "Google Sans Code",
+      width: "80px",
+    };
+  } else {
+    return {
+      background: "#fff",
+      borderRadius: 10,
+      padding: 5,
+      fontSize: "12px",
+      fontFamily: "Google Sans Code",
+      width: "100px",
+    };
+  }
 };
 
-const categoryStyle = {
-  background: "#fff",
-  borderRadius: 10,
-  padding: 9,
-  fontSize: "25px",
-  fontFamily: "Google Sans Code",
-  width: "180px",
+const getNodeStyle = () => {
+  if (window.innerWidth >= 400 && window.innerWidth <= 480) {
+    return {
+      background: "transparent",
+      color: "#fff",
+      border: "2px solid #fff",
+      borderRadius: "10px",
+      fontWeight: 500,
+      fontSize: "8px",
+      fontFamily: "Google Sans Code",
+      width: "50px",
+      padding: 2,
+      textAlign: "center",
+    };
+  } else {
+    return {
+      background: "transparent",
+      color: "#fff",
+      border: "2px solid #fff",
+      borderRadius: "10px",
+      fontWeight: 500,
+      fontSize: "12px",
+      fontFamily: "Google Sans Code",
+      width: "70px",
+      padding: 4,
+      textAlign: "center",
+    };
+  }
 };
 
 export const nodes = [
   {
     id: "1",
-    position: { x: 250, y: -60 },
+    position: { x: 120, y: 20 },
     data: { label: "Ida Grufman Johansson" },
-    style: headingLable,
+    style: getHeadingLabelStyle(),
   },
-
   {
     id: "2",
-    position: { x: 100, y: 70 },
+    position: { x: 70, y: 80 },
     data: { label: "Tech Stack" },
-    style: categoryStyle,
+    style: getCategoryStyle(),
   },
   {
     id: "3",
-    position: { x: 570, y: 70 },
+    position: { x: 300, y: 80 },
     data: { label: "Qualities" },
-    style: categoryStyle,
+    style: getCategoryStyle(),
   },
 
   {
     id: "4",
-    position: { x: 20, y: 200 },
+    position: { x: 10, y: 200 },
     data: { label: "React" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
   {
     id: "5",
-    position: { x: 120, y: 300 },
+    position: { x: 50, y: 250 },
     data: { label: "Node.js" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
   {
     id: "6",
-    position: { x: 300, y: 350 },
+    position: { x: 100, y: 200 },
     data: { label: "Java" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
   {
     id: "7",
-    position: { x: 380, y: 200 },
+    position: { x: 150, y: 150 },
     data: { label: "DevOps" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
 
   {
     id: "8",
-    position: { x: 520, y: 320 },
+    position: { x: 200, y: 210 },
     data: { label: "Creative" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
   {
     id: "9",
-    position: { x: 640, y: 400 },
+    position: { x: 280, y: 220 },
     data: { label: "Driven" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
   {
     id: "10",
-    position: { x: 760, y: 300 },
+    position: { x: 350, y: 180 },
     data: { label: "Project Leader" },
-    style: nodeStyle,
+    style: getNodeStyle(),
   },
 ];
 

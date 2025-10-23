@@ -130,7 +130,7 @@ export default function Ida() {
             </Card.Body>
           </Col>
           <Col className="code-box">
-            <Card.Body>
+            <Card.Body className="eer-container">
               <EER />
             </Card.Body>
           </Col>

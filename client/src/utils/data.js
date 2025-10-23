@@ -25,22 +25,6 @@ export const jsonString = `{
 
 // EER
 
-export const techStack = [
-  "Express",
-  "React",
-  "Node.js",
-  "Java",
-  "TypeScript",
-  "SQL",
-  "Spring",
-  "JavaScript",
-  "Bootstrap",
-  "Sass",
-  "Tailwind CSS",
-];
-
-export const qualityStack = ["Project leader", "Creative", "Driven"];
-
 const nodeStyle = {
   background: "transparent",
   color: "#fff",

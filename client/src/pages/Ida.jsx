@@ -15,7 +15,7 @@ import { EncryptedText } from "../components/EncryptedText.jsx";
 import { jsonString } from "../utils/data.js";
 import EER from "../components/EER.jsx";
 
-const Ida = () => {
+export default function Ida() {
   const [aboutText, setAboutText] = useState(null);
   const [todayText, setTodayText] = useState(null);
   const navigate = useNavigate();
@@ -152,6 +152,4 @@ const Ida = () => {
       </Container>
     </main>
   );
-};
-
-export default Ida;
+}

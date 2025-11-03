@@ -53,7 +53,7 @@ const NavBar = () => {
                 EXPERIENCE
               </Nav.Link>
               <Nav.Link className="custom-link" href="/projects">
-                PRPJECTS
+                PROJECTS
               </Nav.Link>
               <Nav.Link className="custom-link" href="/contact">
                 CONTACT
